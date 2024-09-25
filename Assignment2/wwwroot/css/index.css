@@ -1,0 +1,122 @@
+﻿#query {
+    resize: none;
+    width: 50%;
+    height: 30px;
+    align-content: center;
+}
+
+@keyframes slideBackgroundDiagonal {
+    0% {
+        background-position: 0 100%; /* Start from bottom-left */
+    }
+
+    100% {
+        background-position: 100% 0; /* Move to top-right */
+    }
+}
+
+/* Style for the animated background */
+.background-animate {
+    background-size: 200px; /* Control the size of the repeating pattern */
+    background-repeat: repeat;
+    animation: slideBackgroundDiagonal 80s linear infinite;
+}
+
+body {
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    background-repeat: repeat;
+    background-size: 200px; /* Default size, adjust if needed */
+    background-position: top left;
+    /*    cursor: url(./images/banana-cursor.png), auto;*/
+}
+
+#title {
+    text-shadow: 2px 2px 4px #cbc7bd;
+    background-color: white;
+    border-radius: 8px;
+    width: 30%;
+}
+
+
+
+#maincontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-container {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.search-img {
+    width: 200px;
+    height: auto;
+    background-color: white; /* Set background color to white */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect */
+    display: inline-block; /* Ensure the background and shadow fit around the image */
+    transition: transform 0.2s ease-in-out; /* Smooth transition for scaling */
+}
+
+/* Add hover effect for a more pronounced glow */
+.search-img:hover {
+    transform: scale(1.2); /* Scale up smoothly */
+}
+
+
+/* Style for the jQuery UI dialog modal */
+.ui-dialog {
+    background: #282828; /* Change background color */
+    border: 2px solid #007bff; /* Change border color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Title bar styles */
+.ui-dialog-titlebar {
+    background: white; /* Title bar background */
+    color: black; /* Title text color */
+    border: none; /* Remove border */
+}
+
+/* Close button styles */
+.ui-dialog-titlebar-close {
+    color: white; /* Close button text color */
+}
+
+/* Content area styles */
+.ui-dialog-content {
+    padding: 20px; /* Add padding to the content */
+    font-family: Arial, sans-serif; /* Change font family */
+    color: white;
+    font-style: italic;
+}
+
+.ui-dialog-content a {
+    color: white;
+    font-style: normal;
+}
+
+/* Button styles within the modal */
+.ui-dialog-buttonpane button {
+    background: #28a745; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded button corners */
+    padding: 10px 15px; /* Button padding */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Button hover effect */
+.ui-dialog-buttonpane button:hover {
+    background: #218838; /* Darker green on hover */
+}

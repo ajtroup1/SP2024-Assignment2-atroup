@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+<head>
+
+    <title>Monke Search</title>
+
+    <link rel="shortcut icon" href="./images/banana.ico" />
+
+
+
+    <!-- JQuery UI Theme CSS CDN -->
+
+    <link rel="stylesheet"
+          href=https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/pepper-grinder/jquery-ui.css
+          integrity="sha384-sqqDPqey9c5z9di0RN8pCagFkGsvQJ6zqdEbpRPzr26gnpplXNr8u4xnbzf1L9PA"
+          crossorigin="anonymous" />
+
+
+
+    <!--Local CSS-->
+
+    <link rel="stylesheet" href="./css/index.css" />
+
+</head>
+
+<body id="body">
+
+    <div id="maincontent">
+
+        <h1 id="title" onclick="backgroundImageChanger()">Ding! <span style="font-size: 12px; color: gray; cursor: pointer;">(Click me)</span></h1>
+
+        <textarea id="query"
+                  class="ui-widget ui-state-default ui-corner-all"
+                  placeholder="Search..."
+                  maxlength="300"></textarea>
+
+        <br />
+
+        <div class="btn-container">
+            <button class="ui-button ui-corner-all ui-widget"
+                    type="button"
+                    id="myBtn"
+                    value="Search"
+                    onclick="QuerySearch()">
+
+                Search!
+
+            </button>
+
+            <button class="ui-button ui-corner-all ui-widget"
+                    type="button"
+                    id="myBtn"
+                    value="Search"
+                    onclick="updateTimeTextBox()">
+
+                Current Time
+
+            </button>
+
+            <button class="ui-button ui-corner-all ui-widget" id="luckyBanana" onclick="findLuckyBanana()">
+
+                Feeling lucky?
+
+            </button>
+        </div>
+
+
+    </div>
+
+
+
+    <div id="searchResults"></div>
+
+
+
+    <div id="time"></div>
+
+
+
+    <!-- JQuery JS CDN -->
+
+    <script src=https://code.jquery.com/jquery-3.6.0.js></script>
+
+
+
+    <!-- JQurey UI JS CDN -->
+
+    <script src=https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js
+            integrity="sha384-4D3G3GikQs6hLlLZGdz5wLFzuqE9v4yVGAcOH86y23JqBDPzj9viv0EqyfIa6YUL"
+            crossorigin="anonymous"></script>
+
+
+
+    <!--Local JS-->
+
+    <script type="text/javascript" src="./js/index.js"></script>
+
+</body>
+
+</html>
