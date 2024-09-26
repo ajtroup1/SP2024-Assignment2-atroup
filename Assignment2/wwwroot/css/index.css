@@ -7,17 +7,16 @@
 
 @keyframes slideBackgroundDiagonal {
     0% {
-        background-position: 0 100%; /* Start from bottom-left */
+        background-position: 0 100%;
     }
 
     100% {
-        background-position: 100% 0; /* Move to top-right */
+        background-position: 100% 0;
     }
 }
 
-/* Style for the animated background */
 .background-animate {
-    background-size: 200px; /* Control the size of the repeating pattern */
+    background-size: 200px;
     background-repeat: repeat;
     animation: slideBackgroundDiagonal 80s linear infinite;
 }
@@ -31,9 +30,8 @@ body {
     overflow-y: hidden;
     scroll-behavior: smooth;
     background-repeat: repeat;
-    background-size: 200px; /* Default size, adjust if needed */
+    background-size: 200px;
     background-position: top left;
-    /*    cursor: url(./images/banana-cursor.png), auto;*/
 }
 
 #title {
@@ -63,78 +61,28 @@ body {
 }
 
 .btn {
-    padding: 12px 25px; /* Add padding for size */
-    border-radius: 8px; /* Rounded corners */
-    border: none; /* Remove border */
-    color: black; /* Text color */
-    font-size: 16px; /* Font size */
-    font-weight: bold; /* Make text bold */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .search-img {
     width: 200px;
     height: auto;
-    background-color: white; /* Set background color to white */
-    border-radius: 10px; /* Optional: Rounded corners */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Glow effect */
-    display: inline-block; /* Ensure the background and shadow fit around the image */
-    transition: transform 0.2s ease-in-out; /* Smooth transition for scaling */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
 }
 
-/* Add hover effect for a more pronounced glow */
 .search-img:hover {
-    transform: scale(1.2); /* Scale up smoothly */
-}
-
-
-/* Style for the jQuery UI dialog modal */
-.ui-dialog {
-    background: #282828; /* Change background color */
-    border: 2px solid #007bff; /* Change border color */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow */
-}
-
-/* Title bar styles */
-.ui-dialog-titlebar {
-    background: white; /* Title bar background */
-    color: black; /* Title text color */
-    border: none; /* Remove border */
-}
-
-/* Close button styles */
-.ui-dialog-titlebar-close {
-    color: white; /* Close button text color */
-}
-
-/* Content area styles */
-.ui-dialog-content {
-    padding: 20px; /* Add padding to the content */
-    font-family: Arial, sans-serif; /* Change font family */
-    color: white;
-    font-style: italic;
-}
-
-.ui-dialog-content a {
-    color: white;
-    font-style: normal;
-}
-
-/* Button styles within the modal */
-.ui-dialog-buttonpane button {
-    background: #28a745; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded button corners */
-    padding: 10px 15px; /* Button padding */
-    cursor: pointer; /* Change cursor on hover */
-}
-
-/* Button hover effect */
-.ui-dialog-buttonpane button:hover {
-    background: #218838; /* Darker green on hover */
+    transform: scale(1.2);
 }
 
 #fullscreenImage {
@@ -149,13 +97,13 @@ body {
     opacity: 0;
     transition: opacity 1s ease-out;
     z-index: 9999;
-    pointer-events: none; /* Prevent interactions */
+    pointer-events: none;
 }
 
 .show {
-    opacity: 1; /* Show the image */
+    opacity: 1;
 }
 
 .fade-out {
-    opacity: 0; /* Fade out the image */
+    opacity: 0;
 }

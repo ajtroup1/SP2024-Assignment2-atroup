@@ -5,7 +5,7 @@ var results = '';
 
 
 function apiSearch() {
-    let results = ""; // Use let for block-scoped variable
+    let results = "";
 
     let q = $("#query").val();
     if (q == "" || !q) {
@@ -13,7 +13,6 @@ function apiSearch() {
         return;
     }
 
-    // Prepare parameters for the API call
     const params = {
         "q": $("#query").val(),
         "count": "50",
@@ -21,7 +20,6 @@ function apiSearch() {
         "mkt": "en-us"
     };
 
-    // Perform the AJAX request
     $.ajax({
         url: 'https://api.bing.microsoft.com/v7.0/search?' + $.param(params),
         beforeSend: function (xhrObj) {
@@ -32,12 +30,11 @@ function apiSearch() {
         .done(function (data) {
             console.log(data);
 
-            const len = data.webPages.value.length; // Use const for length
+            const len = data.webPages.value.length;
             for (let i = 0; i < len; i++) {
                 results += "<p><a href='" + data.webPages.value[i].url + "'>" + data.webPages.value[i].name + "</a>: " + data.webPages.value[i].snippet + "</p>";
                 results += `<div>`;
 
-                // Check if images.value exists and if the current index is valid
                 if (data.images && data.images.value && data.images.value[i]) {
                     if (data.images.value[i].contentUrl) {
                         results += `<img src="${data.images.value[i].contentUrl}" alt="Image" class="search-img" />`; // Correct img tag syntax
@@ -48,10 +45,8 @@ function apiSearch() {
                 results += `</div>`;
             }
 
-            // Update the search results in the DOM
             $('#searchResults').html(results);
 
-            // Initialize the dialog for search results
             $('#searchResults').dialog({
                 height: 400,
                 width: 600,
@@ -70,14 +65,11 @@ function backgroundImageChanger() {
     var backgroundImage = window.getComputedStyle(element).backgroundImage;
 
     if (backgroundImage.includes('https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/seamless-repeating-background-tile-terryfic3d.jpg')) {
-        // Change to the second image and animate
         document.body.style.backgroundImage = 'url("https://64.media.tumblr.com/162cc3dfa5cef6c882aba5453445f0fb/tumblr_mx3y1yYFad1qcm0eto1_1280.png")';
     } else {
-        // Change back to the first image and animate
         document.body.style.backgroundImage = 'url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/seamless-repeating-background-tile-terryfic3d.jpg")';
     }
 
-    // Apply the class to animate the background
     document.body.classList.add('background-animate');
 }
 
@@ -125,10 +117,9 @@ function updateTimeTextBox() {
     $('#time').dialog({
         title: "Current Time",
         modal: true,
-        width: 250,  // Adjust width as needed
-        height: 150, // Adjust height as needed
+        width: 250, 
+        height: 150,
         open: function (event, ui) {
-            // Additional styling can be applied here if needed
         }
     });
 }
@@ -148,19 +139,16 @@ function getLucky() {
         var audio = new Audio('../assets/vine-boom.mp3');
         audio.play();
 
-        // Get the fullscreen image element
         var fullscreenImage = document.getElementById('fullscreenImage');
 
-        // Show the image by changing opacity
         fullscreenImage.style.opacity = 1;
 
         var audio = new Audio('../assets/casino-win.mp3');
         audio.play();
 
-        // Fade out the image after a short delay
         setTimeout(function () {
-            fullscreenImage.style.opacity = 0; // Start the fade-out effect
-        }, 2000); // Small delay to ensure the image is visible before fading out
+            fullscreenImage.style.opacity = 0;
+        }, 2000);
     } else {
         var params = {
 
