@@ -6,9 +6,9 @@
 
 <head>
 
-    <title>Monke Search</title>
+    <title>Ding!</title>
 
-    <link rel="shortcut icon" href="./images/banana.ico" />
+    <link rel="shortcut icon" href="" />
 
 
 
@@ -31,6 +31,8 @@
 
     <div id="maincontent">
 
+        <img src="./assets/ding.jpg" id="ding-logo"/>
+
         <h1 id="title" onclick="backgroundImageChanger()">Ding! <span style="font-size: 12px; color: gray; cursor: pointer;">(Click me)</span></h1>
 
         <textarea id="query"
@@ -41,7 +43,7 @@
         <br />
 
         <div class="btn-container">
-            <button class="ui-button ui-corner-all ui-widget"
+            <button class="btn"
                     type="button"
                     id="myBtn"
                     value="Search"
@@ -51,7 +53,7 @@
 
             </button>
 
-            <button class="ui-button ui-corner-all ui-widget"
+            <button class="btn"
                     type="button"
                     id="myBtn"
                     value="Search"
@@ -61,13 +63,13 @@
 
             </button>
 
-            <button class="ui-button ui-corner-all ui-widget" id="luckyBanana" onclick="findLuckyBanana()">
+            <button class="btn" id="luckyBanana" onclick="getLucky()">
 
                 Feeling lucky?
 
             </button>
         </div>
-
+        <div id="fullscreenImage"></div>
 
     </div>
 

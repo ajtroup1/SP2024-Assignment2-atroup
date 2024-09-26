@@ -133,24 +133,35 @@ function updateTimeTextBox() {
     });
 }
 
-function findLuckyBanana() {
+
+function getLucky() {
 
 
 
-    //Random between 1 and 10
+    //Random between 1 and 5
 
-    //let randomChance = Math.floor(Math.random() * 10) + 1;
-    let randomChance = 7;
-    console.log("randomChance:", randomChance);
+    let randomChance = Math.floor(Math.random() * 5) + 1;
 
 
 
-    if (randomChance === 7) {
+    if (randomChance === 3) {
+        var audio = new Audio('../assets/vine-boom.mp3');
+        audio.play();
 
-        window.open("./images/golden-banana.jpg", "Window Title", "width=500, height=500")
+        // Get the fullscreen image element
+        var fullscreenImage = document.getElementById('fullscreenImage');
 
+        // Show the image by changing opacity
+        fullscreenImage.style.opacity = 1;
+
+        var audio = new Audio('../assets/casino-win.mp3');
+        audio.play();
+
+        // Fade out the image after a short delay
+        setTimeout(function () {
+            fullscreenImage.style.opacity = 0; // Start the fade-out effect
+        }, 2000); // Small delay to ensure the image is visible before fading out
     } else {
-        console.log("making ajax call")
         var params = {
 
             "q": $("#query").val(),
@@ -194,3 +205,5 @@ function findLuckyBanana() {
     }
 
 }
+
+window.getLucky = getLucky;

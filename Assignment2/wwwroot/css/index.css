@@ -43,7 +43,12 @@ body {
     width: 30%;
 }
 
-
+#ding-logo {
+    width: 25%;
+    height: auto;
+    position: absolute;
+    bottom: 10%;
+}
 
 #maincontent {
     display: flex;
@@ -55,6 +60,17 @@ body {
     display: flex;
     width: 50%;
     justify-content: space-evenly;
+}
+
+.btn {
+    padding: 12px 25px; /* Add padding for size */
+    border-radius: 8px; /* Rounded corners */
+    border: none; /* Remove border */
+    color: black; /* Text color */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Make text bold */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
 
 .search-img {
@@ -119,4 +135,27 @@ body {
 /* Button hover effect */
 .ui-dialog-buttonpane button:hover {
     background: #218838; /* Darker green on hover */
+}
+
+#fullscreenImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://boothillcasino.com/wp-content/uploads/2023/06/Happy-Gambling-1500.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+    z-index: 9999;
+    pointer-events: none; /* Prevent interactions */
+}
+
+.show {
+    opacity: 1; /* Show the image */
+}
+
+.fade-out {
+    opacity: 0; /* Fade out the image */
 }
